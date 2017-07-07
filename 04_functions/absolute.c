@@ -8,7 +8,7 @@ int abs(int number){
   if (number >= 0 ) {
     return number;
   } else {
-    return (-2 * number) - number;
+    return -1 * number;
   }
 }
 
