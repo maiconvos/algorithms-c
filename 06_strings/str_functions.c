@@ -217,10 +217,6 @@ int ult_ind_char(char *s, char ch) {
 }
 
 void main() {
-  char p[] = "MAicon D";
-  char p2[] = "MAicon";
 
-  printf("String natural: %s\n", p);
-  printf("String after first set: %s\n", strnset(p, 'a', 5));
-  printf("String after first set: %s\n", strnset(p, 'x', 32));
+
 }
