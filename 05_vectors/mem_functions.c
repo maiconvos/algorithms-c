@@ -34,7 +34,6 @@ int memicmp(char *s1, char *s2, int n) {
   return TRUE;
 }
 
-
 void main() {
   char first[] = {'m','y',' ','n','a','m','e',' ','i','s',' ','C'};
   char second[10];
