@@ -32,17 +32,13 @@ char nth_char(char *s, int n) {
 
 // Compacts all the repetead characters in only character on string.
 char *strpack(char *s) {
-  for (int count = 0; s[count] != '\0'; count++) {
-    int next = count + 1;
-
-    while (s[count] == s[next] && s[next] != '\0') {
-      int forward;
-
-      for (forward = next; s[forward] != '\0'; forward++)
-        s[forward] = s[forward + 1];
-    }
+  int current, next;
+  for (next = current = 0; s[current] != '\0'; current++) {
+    if (s[next] != s[current])
+      s[++next] = s[current];
   }
 
+  s[++next] = '\0';
   return s;
 }
 
@@ -108,18 +104,13 @@ char *updown(char *s) {
 int atoi(char *s) {
   int value = 0;
   int reference_digit = 1; // Represents units, dozens, hundreds and so on.
+  int count = strlen(s) - 1;
 
-  for (int count = strlen(s) - 1; count >= 0; count--) {
-    if ( isdigit(s[count]) ) {
-      while( isdigit(s[count]) ) {
-        value = ( (int) s[count] - '0') * reference_digit + value;
-        reference_digit *= 10;
+  while( isdigit(s[count]) ) {
+    value += ( (int) s[count] - '0') * reference_digit;
+    reference_digit *= 10;
 
-        if (s[--count] == '-')  value *= -1; //Check minus and turns number in negative.
-      }
-
-      break;
-    }
+    if (s[--count] == '-')  value *= -1; //Check minus and turns number in negative.
   }
 
   return value;
