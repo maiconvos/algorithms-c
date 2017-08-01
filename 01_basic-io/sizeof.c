@@ -1,5 +1,5 @@
 /*
-  A simple example how to use the sizeof operator to know the size in bytes a type.
+  A simple example how to use the sizeof operator to know the size in bytes of a type.
   Author: @maiconvos
 */
 #include <stdio.h>
