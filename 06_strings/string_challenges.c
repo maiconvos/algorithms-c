@@ -33,12 +33,12 @@ char nth_char(char *s, int n) {
 // Compacts all the repetead characters in only character on string.
 char *strpack(char *s) {
   int current, next;
-  for (next = current = 0; s[current] != '\0'; current++) {
+  for (next = current = 0; s[next] != '\0'; next++) {
     if (s[next] != s[current])
-      s[++next] = s[current];
+      s[++current] = s[next];
   }
 
-  s[++next] = '\0';
+  s[++current] = '\0';
   return s;
 }
 
