@@ -32,13 +32,11 @@ void show(char s[DIM][DIM]) {
 // Check the fields on a diagonal.
 int check_dig(char s[][DIM]) {
   if (s[0][0] != SPACE) {
-    if ( (s[0][0] == s[1][1]) && (s[1][1] == s[2][2]) )
-      return TRUE;
+    if ( (s[0][0] == s[1][1]) && (s[1][1] == s[2][2]) ) return TRUE;
   }
 
   if (s[0][2] != SPACE) {
-    if ( (s[0][2] == s[1][1]) && (s[1][1] == s[2][0]) )
-      return TRUE;
+    if ( (s[0][2] == s[1][1]) && (s[1][1] == s[2][0]) ) return TRUE;
   }
 
   return FALSE;
@@ -46,34 +44,26 @@ int check_dig(char s[][DIM]) {
 
 // Check the fields on a row.
 int check_row(char s[][DIM]) {
-  int is_winner = FALSE;
 
   for (int row = 0; row < DIM; row++) {
     if (s[row][0] != SPACE) {
-      if ( (s[row][0] == s[row][1]) && (s[row][1] == s[row][2]) ) {
-        is_winner = TRUE;
-        break;
-      }
+      if ( (s[row][0] == s[row][1]) && (s[row][1] == s[row][2]) ) return TRUE;
     }
   }
 
-  return is_winner;
+  return FALSE;
 }
 
 // Check the fields on a column.
 int check_col(char s[][DIM]) {
-  int is_winner = FALSE;
 
   for (int column = 0; column < DIM; column++) {
     if (s[0][column] != SPACE) {
-      if ( (s[0][column] == s[1][column]) && (s[1][column] == s[2][column]) ) {
-        is_winner = TRUE;
-        break;
-      }
+      if ( (s[0][column] == s[1][column]) && (s[1][column] == s[2][column]) ) return TRUE;
     }
   }
 
-  return is_winner;
+  return FALSE;
 }
 
 // Check if there is a winner
@@ -91,7 +81,7 @@ void main() {
   int posX, posY;
   char ch = 'O';
   int play = TRUE;
-  int number_of_playeds = 0;
+  int number_of_plays = 0;
   int is_winner = FALSE;
 
   printf("\t WELCOME TO TIC-TAC-TOE GAME\n");
@@ -111,13 +101,13 @@ void main() {
 
       if (tictac[posX][posY] == SPACE) {
         tictac[posX][posY] = ch = (ch == 'O') ? 'X' : 'O';
-        number_of_playeds++;
+        number_of_plays++;
         is_winner = check_winner(tictac);
       } else {
         printf("Position is not empty! Try another one.\n");
       }
 
-      if (number_of_playeds == DIM * DIM) break;
+      if (number_of_plays == DIM * DIM) break;
       if (is_winner) break;
   }
 
