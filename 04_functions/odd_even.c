@@ -5,11 +5,10 @@
 #include <stdio.h>
 
 void parity(int number) {
-  if (number % 2 == 0) {
+  if (number % 2 == 0)
     printf("It is even.\n");
-  } else {
+  else
     printf("It is odd.\n");
-  }
 }
 
 void main() {

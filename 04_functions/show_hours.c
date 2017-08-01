@@ -1,5 +1,5 @@
 /*
-  Program takes a number of hours and shows the number of seconds in it.
+  Program takes a number of hours and shows the number of seconds.
   Author: @maiconvos.
 */
 #include <stdio.h>

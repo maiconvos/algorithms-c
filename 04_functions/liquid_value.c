@@ -1,5 +1,5 @@
 /*
-  Program returns a liquid value based on calculo.
+  Program returns a liquid value based on calculation.
   Author: @maiconvos
 */
 #include <stdio.h>

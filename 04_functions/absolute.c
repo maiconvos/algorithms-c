@@ -5,11 +5,10 @@
 #include <stdio.h>
 
 int abs(int number){
-  if (number >= 0 ) {
+  if (number >= 0 )
     return number;
-  } else {
+  else
     return -1 * number;
-  }
 }
 
 void main() {
