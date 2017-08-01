@@ -51,9 +51,7 @@ void main() {
   if (number_of_days) {
     printf("The month %d has %d days.\n", month, number_of_days);
 
-    if (leap_feb) {
-      printf("And %d days when is a leap year.\n", leap_feb);
-    }
+    if (leap_feb) printf("And %d days when is a leap year.\n", leap_feb);
   } else {
     printf("You don't entered a valid month number.\n");
   }
