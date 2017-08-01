@@ -54,7 +54,7 @@ int strcountc(char *s, char ch) {
   return times;
 }
 
-// Counts the number of digits on given string.
+// Counts the number of digits on a given string.
 int strcountd(char *s) {
   int times = 0;
 
@@ -81,8 +81,7 @@ int strpal(char *s) {
   int begin, end;
 
   for (begin = 0, end = strlen(s) - 1; begin < end; begin++, end--) {
-    if (s[begin] != s[end])
-      return 0; // False
+    if (s[begin] != s[end]) return 0; // False
   }
 
   return 1;
@@ -217,6 +216,6 @@ int ult_ind_char(char *s, char ch) {
 }
 
 void main() {
-
-
+  char name[] = "Meu nome e Maicon Vinicios";
+  printf("%s\n", strdelc(name, 'o'));
 }

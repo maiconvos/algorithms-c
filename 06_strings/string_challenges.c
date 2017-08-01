@@ -24,7 +24,7 @@ char *rmv_uniquec(char *s) {
 }
 
 // Returns the nth character on array.
-char n_esimo(char *s, int n) {
+char nth_char(char *s, int n) {
   if (--n < strlen(s) ) return s[n];
 
   return '\0';
@@ -107,7 +107,7 @@ char *updown(char *s) {
 // Receives an array and returns an integer according its value.
 int atoi(char *s) {
   int value = 0;
-  int reference_digit = 1; // Represents units, dozens, hundreds and son on.
+  int reference_digit = 1; // Represents units, dozens, hundreds and so on.
 
   for (int count = strlen(s) - 1; count >= 0; count--) {
     if ( isdigit(s[count]) ) {
