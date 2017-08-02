@@ -15,7 +15,8 @@ The file_name.c is the file you want to compile and name_to_binary_file is the n
 
 To execute the binary just enter (assuming the path for the binary file): ./name_to_binary_file
 
-====================================================================================================================
+
+
 # ALGORITHMS-C
 --------------------------------------------------------
 Este repositório é uma sequência de exercícios que eu fiz
